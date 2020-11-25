@@ -17,6 +17,8 @@
 		6722129F256C18F300D9A462 /* BreatheUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6722129E256C18F300D9A462 /* BreatheUITests.swift */; };
 		672212D5256C42BF00D9A462 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672212D4256C42BF00D9A462 /* MainTableViewCell.swift */; };
 		672212DE256D9A7000D9A462 /* DesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672212DD256D9A7000D9A462 /* DesignView.swift */; };
+		672212E6256DA85900D9A462 /* BreatheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672212E5256DA85900D9A462 /* BreatheViewController.swift */; };
+		B177E64B819B4F3AE7ED07D4 /* Pods_Breathe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E045ECD813FDA165805645 /* Pods_Breathe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		672212A0256C18F300D9A462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		672212D4256C42BF00D9A462 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		672212DD256D9A7000D9A462 /* DesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignView.swift; sourceTree = "<group>"; };
+		672212E5256DA85900D9A462 /* BreatheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewController.swift; sourceTree = "<group>"; };
+		A6C3D4F0DD39A8F101B36798 /* Pods-Breathe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breathe.debug.xcconfig"; path = "Target Support Files/Pods-Breathe/Pods-Breathe.debug.xcconfig"; sourceTree = "<group>"; };
+		CC2D83E2B8B1DD8174DE6F84 /* Pods-Breathe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breathe.release.xcconfig"; path = "Target Support Files/Pods-Breathe/Pods-Breathe.release.xcconfig"; sourceTree = "<group>"; };
+		F9E045ECD813FDA165805645 /* Pods_Breathe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breathe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B177E64B819B4F3AE7ED07D4 /* Pods_Breathe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08942EE8C17D61F9BC2192DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6C3D4F0DD39A8F101B36798 /* Pods-Breathe.debug.xcconfig */,
+				CC2D83E2B8B1DD8174DE6F84 /* Pods-Breathe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		67221270256C18F200D9A462 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +103,8 @@
 				67221292256C18F300D9A462 /* BreatheTests */,
 				6722129D256C18F300D9A462 /* BreatheUITests */,
 				6722127A256C18F200D9A462 /* Products */,
+				08942EE8C17D61F9BC2192DF /* Pods */,
+				D930CC73F7B9658C6B67DBBF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				67221280256C18F200D9A462 /* MainViewController.swift */,
+				672212E5256DA85900D9A462 /* BreatheViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -190,6 +209,14 @@
 			name = Extention;
 			sourceTree = "<group>";
 		};
+		D930CC73F7B9658C6B67DBBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9E045ECD813FDA165805645 /* Pods_Breathe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -197,9 +224,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 672212A3256C18F300D9A462 /* Build configuration list for PBXNativeTarget "Breathe" */;
 			buildPhases = (
+				7A44601C374128D4897BCEAE /* [CP] Check Pods Manifest.lock */,
 				67221275256C18F200D9A462 /* Sources */,
 				67221276256C18F200D9A462 /* Frameworks */,
 				67221277256C18F200D9A462 /* Resources */,
+				CBF84EF01E84C4055C5AC10B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -315,6 +344,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7A44601C374128D4897BCEAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Breathe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBF84EF01E84C4055C5AC10B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Breathe/Pods-Breathe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Breathe/Pods-Breathe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Breathe/Pods-Breathe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		67221275256C18F200D9A462 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -322,6 +393,7 @@
 			files = (
 				67221281256C18F200D9A462 /* MainViewController.swift in Sources */,
 				6722127D256C18F200D9A462 /* AppDelegate.swift in Sources */,
+				672212E6256DA85900D9A462 /* BreatheViewController.swift in Sources */,
 				672212DE256D9A7000D9A462 /* DesignView.swift in Sources */,
 				672212D5256C42BF00D9A462 /* MainTableViewCell.swift in Sources */,
 				6722127F256C18F200D9A462 /* SceneDelegate.swift in Sources */,
@@ -497,6 +569,7 @@
 		};
 		672212A4256C18F300D9A462 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6C3D4F0DD39A8F101B36798 /* Pods-Breathe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -516,6 +589,7 @@
 		};
 		672212A5256C18F300D9A462 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC2D83E2B8B1DD8174DE6F84 /* Pods-Breathe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

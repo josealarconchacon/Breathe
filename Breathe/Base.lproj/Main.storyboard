@@ -49,6 +49,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cadenceLabel" destination="lBS-94-xTu" id="MAj-ld-6Qv"/>
+                                            <segue destination="JkK-nY-Lfg" kind="presentation" modalPresentationStyle="fullScreen" id="E7y-GV-BDq"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -72,6 +73,65 @@
             </objects>
             <point key="canvasLocation" x="785.50724637681162" y="93.75"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="KAp-JJ-Qc5">
+            <objects>
+                <viewController storyboardIdentifier="SmallView" id="JkK-nY-Lfg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IDE-m4-dzf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Drt-8S-AE0"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dj1-8h-InV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mGP-cv-i5y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1403" y="95"/>
+        </scene>
+        <!--Breathe View Controller-->
+        <scene sceneID="E7n-XS-aKC">
+            <objects>
+                <viewController id="08N-Hd-7jK" customClass="BreatheViewController" customModule="Breathe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xMQ-tb-fHh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o7s-tM-K7F" customClass="MBCircularProgressBarView">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7gk-dI-IaT"/>
+                                    <constraint firstAttribute="height" constant="300" id="HRY-U0-Kka"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="unitString" value="Inheal"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showUnitString" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lJf-CO-xi4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o7s-tM-K7F" firstAttribute="centerY" secondItem="xMQ-tb-fHh" secondAttribute="centerY" id="TM0-gL-CUt"/>
+                            <constraint firstItem="o7s-tM-K7F" firstAttribute="centerX" secondItem="xMQ-tb-fHh" secondAttribute="centerX" id="tsY-ds-QnH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="o7s-tM-K7F" id="Srk-UU-hdh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5gU-LZ-2E0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="-560"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="u56-1n-M1O">
             <objects>
@@ -94,6 +154,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

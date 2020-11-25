@@ -1,0 +1,20 @@
+PODS:
+  - BonsaiController (6.0.0)
+  - MBCircularProgressBar (0.3.5)
+
+DEPENDENCIES:
+  - BonsaiController
+  - MBCircularProgressBar
+
+SPEC REPOS:
+  trunk:
+    - BonsaiController
+    - MBCircularProgressBar
+
+SPEC CHECKSUMS:
+  BonsaiController: 63410fc39bc5b3a9df5b329dbc848b6b27edf663
+  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
+
+PODFILE CHECKSUM: 4f561909d8d647a703e7ae4166f5318170252942
+
+COCOAPODS: 1.10.0

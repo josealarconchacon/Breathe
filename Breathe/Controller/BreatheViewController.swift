@@ -16,10 +16,4 @@ class BreatheViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 20.0) {
-            self.progressView.unitString = "inheal"
-        }
-    }
 }
